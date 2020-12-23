@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .step-bar {
+        width: 50%;
+        border: 1px solid powderblue;
+        display: flex;
+        justify-content: space-between;
+        /*margin: 0 auto;*/
+        overflow: hidden;
+    }
+    .head {
+        position: relative;
+    }
+    .line-wrapper {
+        position: absolute;
+        height: 1px;
+        background-color: #b9defe;
+        /* 实现n个元素但有n-1条线的必要条件，且需要将最后的线删除 */
+        left: 50%;
+        right: -50%;
+        top: 7px;
+    }
+    .icon-wrapper, .content-wrapper {
+        text-align: center;
+        width: 100px;
+    }
+    .content-wrapper {
+        margin-top: 6px;
+    }
+    .icon {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: relative;
+        border: 2px solid #ff4c3b;
+    }
+</style>
+<body>
+    <div class="step-bar">
+        <div class="list-item" onclick="listItem(0)">
+            <div class="head">
+                <div class="line-wrapper">
+                    <i class="line"></i>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="icon"></i>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <span class="content">步骤一</span>
+            </div>
+        </div>
+        <div class="list-item" onclick="listItem(1)">
+            <div class="head">
+                <div class="line-wrapper">
+                    <i class="line"></i>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="icon"></i>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <span class="content">步骤二</span>
+            </div>
+        </div>
+        <div class="list-item" onclick="listItem(2)">
+            <div class="head">
+                <div class="line-wrapper">
+                    <i class="line"></i>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="icon"></i>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <span class="content">步骤三</span>
+            </div>
+        </div>
+        <div class="list-item" onclick="listItem(3)">
+            <div class="head">
+                <div class="line-wrapper">
+                    <i class="line"></i>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="icon"></i>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <span class="content">步骤四</span>
+            </div>
+        </div>
+        <div class="list-item" onclick="listItem(4)">
+            <div class="head">
+                <div class="line-wrapper">
+                    <i class="line"></i>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="icon"></i>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <span class="content">步骤五</span>
+            </div>
+        </div>
+        <div class="list-item" onclick="listItem(5)">
+            <div class="head">
+                <div class="line-wrapper">
+                    <i class="line"></i>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="icon"></i>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <span class="content">步骤六</span>
+            </div>
+        </div>
+        <div class="list-item" onclick="listItem(6)">
+            <div class="head">
+                <div class="line-wrapper">
+                    <i class="line"></i>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="icon"></i>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <span class="content">步骤七</span>
+            </div>
+        </div>
+        <div class="list-item" onclick="listItem(7)">
+            <div class="head">
+                <div class="line-wrapper">
+                    <i class="line"></i>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="icon"></i>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <span class="content">步骤八</span>
+            </div>
+        </div>
+        <div class="list-item" onclick="listItem(8)">
+            <div class="head">
+                <div class="line-wrapper">
+                    <i class="line"></i>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="icon"></i>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <span class="content">步骤九</span>
+            </div>
+        </div>
+        <div class="list-item" onclick="listItem(9)">
+            <div class="head">
+                <div class="line-wrapper">
+                    <i class="line"></i>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="icon"></i>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <span class="content">步骤十</span>
+            </div>
+        </div>
+        <div class="list-item" onclick="listItem(10)">
+            <div class="head">
+                <div class="line-wrapper">
+                    <i class="line"></i>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="icon"></i>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <span class="content">步骤十一</span>
+            </div>
+        </div>
+        <div class="list-item" onclick="listItem(11)">
+            <div class="head">
+                <div class="line-wrapper">
+                    <i class="line"></i>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="icon"></i>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <span class="content">步骤十二</span>
+            </div>
+        </div>
+        <div class="list-item" onclick="listItem(12)">
+            <div class="head">
+                <div class="line-wrapper">
+                    <i class="line"></i>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="icon"></i>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <span class="content">步骤十三</span>
+            </div>
+        </div>
+        <div class="list-item" onclick="listItem(13)">
+            <div class="head">
+                <div class="line-wrapper">
+                    <i class="line"></i>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="icon"></i>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <span class="content">步骤十四</span>
+            </div>
+        </div>
+        <div class="list-item" onclick="listItem(14)">
+            <div class="head">
+                <div class="line-wrapper">
+                    <i class="line"></i>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="icon"></i>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <span class="content">步骤十五</span>
+            </div>
+        </div>
+        <div class="list-item" onclick="listItem(15)">
+            <div class="head">
+                <div class="line-wrapper">
+                    <i class="line"></i>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="icon"></i>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <span class="content">步骤十六</span>
+            </div>
+        </div>
+        <div class="list-item" onclick="listItem(16)">
+            <div class="head">
+                <div class="line-wrapper">
+                    <i class="line"></i>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="icon"></i>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <span class="content">步骤十七</span>
+            </div>
+        </div>
+        <div class="list-item" onclick="listItem(17)">
+            <div class="head">
+                <div class="line-wrapper">
+                    <i class="line"></i>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="icon"></i>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <span class="content">步骤十八</span>
+            </div>
+        </div>
+        <div class="list-item" onclick="listItem(18)">
+            <div class="head">
+                <div class="line-wrapper">
+                    <i class="line"></i>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="icon"></i>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <span class="content">步骤十九</span>
+            </div>
+        </div>
+        <div class="list-item" onclick="listItem(19)">
+            <div class="head">
+                <div class="line-wrapper">
+                    <i class="line"></i>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="icon"></i>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <span class="content">步骤二十</span>
+            </div>
+        </div>
+        <div class="list-item" onclick="listItem(20)">
+            <div class="head">
+                <div class="line-wrapper">
+                    <i class="line"></i>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="icon"></i>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <span class="content">步骤二十一</span>
+            </div>
+
+        </div>
+
+    </div>
+<script>
+    function listItem(index) {
+        let stepBar = document.getElementsByClassName('step-bar')[0]
+        let items = document.querySelectorAll(".list-item");
+        let itemOffset = items[index].offsetLeft;
+        let i = stepBar.scrollLeft;
+        console.dir(stepBar)
+        console.dir(items[index]);
+        if (i > itemOffset) {
+            let timer = setInterval(() => {
+                if (i > itemOffset) {
+                    i -= 2;
+                    stepBar.scrollLeft = i;
+                } else {
+                    clearInterval(timer);
+                }
+            }, 0);
+        } else {
+            let timer = setInterval(() => {
+                if (i < itemOffset) {
+                    i += 2;
+                    stepBar.scrollLeft = i;
+                } else {
+                    clearInterval(timer);
+                }
+            }, 0);
+        }
+    }
+
+</script>
+</body>
+</html>
